@@ -19,7 +19,7 @@ ssh-keygen -t rsa -C "com.mark.fake@gmail.com"
 `ssh -T git@github.com `
 
 - 终端输出结果
-```
+```shell
 The authenticity of host 'github.com (192.30.253.113)' can't be established.
 RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
 Are you sure you want to continue connecting (yes/no)? yes
@@ -36,7 +36,7 @@ Hi NB-STAR! You've successfully authenticated, but GitHub does not provide shell
 
 进入项目的目录，然后输入：
 
-```
+```shell
 //文件添加到仓库（.代表提交所有文件）
 git add .
 //把文件提交到仓库
@@ -48,5 +48,24 @@ git push
 
 - 第二种：本地创建后推送到github
 
+_前提：在github上手动创建仓库。_
+
+在本地按照如下的命令进行
+
+```shell
+mkdir myblog  
+#如果是已存在的工程项目，则直接cd到项目根目录下，不需要新建。
+cd myblog
+#初始化本地仓库
+git init 
+#添加要push到远程仓库的文件或文件夹
+git add xxx
+#commit
+git commit -am ‘first commit’
+#建立远程仓库
+git remote add origin https://github.com/xxx/myblog.git 
+#将本地仓库push到远程仓库
+git push -u origin master 
+```
 
 
