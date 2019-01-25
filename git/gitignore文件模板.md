@@ -1,3 +1,8 @@
+一些常见忽略：
+
+代码如下
+
+```
 # for Mac OS X System Files
 .DS_Store
 Thumbs.db
@@ -37,3 +42,4 @@ target/
 */target
 */*.iml
 *.iml
+```
